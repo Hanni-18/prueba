@@ -1,4 +1,4 @@
-# Día de muertos
+## Día de muertos
 El mes de noviembre es muy especial para nosotros los Mexicanos. Los días 01 y 02 de este mes, celebramos el "Día de Muertos" una tradición muy arraigada en nuestro país. 
 
 ##Origen 
