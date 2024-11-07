@@ -1,3 +1,4 @@
+# Desafios
 especies <- data.frame(
      especie = c("Ajolote", "Rana", "Serpiente", "Tortuga"),
      habitat = c("Lago", "Río", "Bosque", "Lago"),
@@ -5,6 +6,7 @@ especies <- data.frame(
      peso = c(150, 25, 1000, 500)
  )
 especies
+
     especie habitat tamano peso
 1   Ajolote    Lago     30  150
 2      Rana     Río     10   25
