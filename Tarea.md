@@ -1,0 +1,44 @@
+# Desafios
+especies <- data.frame(
+     especie = c("Ajolote", "Rana", "Serpiente", "Tortuga"),
+     habitat = c("Lago", "Río", "Bosque", "Lago"),
+     tamano = c(30, 10, 150, 50),
+     peso = c(150, 25, 1000, 500)
+ )
+especies
+
+    especie habitat tamano peso
+1   Ajolote    Lago     30  150
+2      Rana     Río     10   25
+3 Serpiente  Bosque    150 1000
+4   Tortuga    Lago     50  500
+especies_fil <- filter(especies, habitat == "Lago")
+especies_fil
+  especie habitat tamano peso
+1 Ajolote    Lago     30  150
+2 Tortuga    Lago     50  500
+especies_ord <- especies_fil[order(especies_fil$tamano), ]
+especies_ord
+  especie habitat tamano peso
+1 Ajolote    Lago     30  150
+2 Tortuga    Lago     50  500
+especies_ord2 <- especies[order(especies$tamano), ]
+especies_ord2
+    especie habitat tamano peso
+2      Rana     Río     10   25
+1   Ajolote    Lago     30  150
+4   Tortuga    Lago     50  500
+3 Serpiente  Bosque    150 1000
+str(iris)
+'data.frame':	150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+library(ggplot2)
+library(hrbrthemes)
+graf_d<-ggplot(iris, aes(x=Sepal.Length, y=Sepal.Width, alpha=Species))+
+     geom_point(size=6, color="#69b3a2") +
+     ggtitle("Gráfico de dispersión") +
+     theme_ipsum()
